@@ -1,0 +1,58 @@
+svg#puzzleSvg {
+    user-select:none;
+}
+
+svg#puzzleSvg rect.border {
+    stroke: black;
+    stroke-width: 0.1px;
+    fill: none;
+}
+
+svg#puzzleSvg rect.target {
+    stroke: none;
+    fill: white;
+    cursor: pointer;
+}
+
+svg#puzzleSvg rect.target.selected {
+    stroke: none;
+    fill: lightblue;
+}
+
+svg#puzzleSvg line.wall {
+    stroke: black;
+    stroke-width: 0.1px;
+    fill: none;
+    stroke-linecap: round;
+}
+
+svg#puzzleSvg line.edge {
+    stroke: #ccc;
+    stroke-width: 0.01px;
+    fill: none;
+    stroke-linecap: round;
+}
+
+svg#puzzleSvg text {
+    font-family: sans-serif;
+    font-size: 0.75px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+}
+
+svg#puzzleSvg text.clue {
+    fill: black;
+}
+
+svg#puzzleSvg text.target {
+    fill: grey;
+}
+
+svg#puzzleSvg text.clue.wrong {
+    fill: darkred;
+}
+
+svg#puzzleSvg text.target.wrong {
+    fill: red;
+}

@@ -1,0 +1,41 @@
+<html>
+ <head>
+  <title>Mazedoku</title>
+  <link rel="stylesheet" href="mazedoku.css">
+ </head>
+<body onload="updatePuzzle(6, 6)">
+  <div>
+    <h3>Mazedoku</h3>
+    <h4>Rules</h4>
+    <p>Each horizontal or vertical corridor of length N must contain digits 1 through N. Cells at a Chess knight move's distance may not contain the same digit. Solutions are unique.</p>
+    <h4>Controls</h4>
+    <p>Click a cell to select it. Use digit keys 1 through 9 to place digits, 0 or delete to clear cells.</p>
+    <h4>Generator</h4>
+    <div>
+        Height:
+        <select id="heightSelect">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6" selected>6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        Width:
+        <select id="widthSelect">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6"selected>6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <button type="button" onclick="updatePuzzle(parseInt(document.getElementById('heightSelect').value), parseInt(document.getElementById('widthSelect').value))">Generate!</button>
+    </div>
+   </div>
+   <svg id="puzzleSvg" width="100%" height="40em"></svg>
+ <script src="mazedoku.js" defer></script>
+</body>
+</html>
